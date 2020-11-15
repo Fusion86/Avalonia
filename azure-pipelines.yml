@@ -3,6 +3,11 @@ jobs:
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK 5.0.0'
+    inputs:
+      version: 5.0.0
+      
   - task: CmdLine@2
     displayName: 'Install Nuke'
     inputs:
@@ -30,9 +35,9 @@ jobs:
     vmImage: 'macOS-10.14'
   steps:
   - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK 3.1.401'
+    displayName: 'Use .NET Core SDK 5.0.0'
     inputs:
-      version: 3.1.401
+      version: 5.0.0
 
   - task: CmdLine@2
     displayName: 'Install Mono 5.18'
@@ -102,9 +107,9 @@ jobs:
     SolutionDir: '$(Build.SourcesDirectory)'
   steps:
   - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK 3.1.401'
+    displayName: 'Use .NET Core SDK 5.0.0'
     inputs:
-      version: 3.1.401
+      version: 5.0.0
 
   - task: CmdLine@2
     displayName: 'Install Nuke'
