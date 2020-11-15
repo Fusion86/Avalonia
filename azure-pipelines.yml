@@ -4,10 +4,10 @@ jobs:
     vmImage: 'ubuntu-16.04'
   steps:
   - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK 5.0.0'
+    displayName: 'Use .NET Core SDK 5.0.100'
     inputs:
-      version: 5.0.0
-      
+      version: 5.0.100
+
   - task: CmdLine@2
     displayName: 'Install Nuke'
     inputs:
@@ -35,9 +35,9 @@ jobs:
     vmImage: 'macOS-10.14'
   steps:
   - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK 5.0.0'
+    displayName: 'Use .NET Core SDK 5.0.100'
     inputs:
-      version: 5.0.0
+      version: 5.0.100
 
   - task: CmdLine@2
     displayName: 'Install Mono 5.18'
@@ -107,9 +107,9 @@ jobs:
     SolutionDir: '$(Build.SourcesDirectory)'
   steps:
   - task: UseDotNet@2
-    displayName: 'Use .NET Core SDK 5.0.0'
+    displayName: 'Use .NET Core SDK 5.0.100'
     inputs:
-      version: 5.0.0
+      version: 5.0.100
 
   - task: CmdLine@2
     displayName: 'Install Nuke'
