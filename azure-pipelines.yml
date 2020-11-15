@@ -4,6 +4,11 @@ jobs:
     vmImage: 'ubuntu-16.04'
   steps:
   - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK 3.1.401'
+    inputs:
+      version: 3.1.401
+
+  - task: UseDotNet@2
     displayName: 'Use .NET Core SDK 5.0.100'
     inputs:
       version: 5.0.100
@@ -34,6 +39,11 @@ jobs:
   pool:
     vmImage: 'macOS-10.14'
   steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK 3.1.401'
+    inputs:
+      version: 3.1.401
+
   - task: UseDotNet@2
     displayName: 'Use .NET Core SDK 5.0.100'
     inputs:
@@ -106,6 +116,11 @@ jobs:
   variables:
     SolutionDir: '$(Build.SourcesDirectory)'
   steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core SDK 3.1.401'
+    inputs:
+      version: 3.1.401
+      
   - task: UseDotNet@2
     displayName: 'Use .NET Core SDK 5.0.100'
     inputs:
